@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Rune Game</title>
+</head>
+<body>
+    <div class="gameTab" id=runeTab>
+        <div id="researchSpeed"></div>
+        <div id="researchBar">
+            <div id="researchProgress">
+            <div id="researchLabel"></div>
+            </div>
+        </div>
+        <div id="activeCount">0 / 1 Runes Active</div>
+        <table id="runeGrid">
+
+        </table>
+        <div id="runeName"></div>
+        <div id="runeDesc"></div>
+    </div>
+    <div class="gameTab" id="autoTab">
+        <table id="timeTable">
+            <tr>
+                <!--
+                <td class="timeClock" id="mod2">0</td>
+                <td class="timeClock" id="mod3">0</td>
+                <td class="timeClock" id="mod4">0</td>
+                <td class="timeClock" id="mod5">0</td>
+                <td class="timeClock" id="mod6">0</td>
+                <td class="timeClock" id="mod12">0</td>
+                <td class="timeClock" id="mod15">0</td>
+                <td class="timeClock" id="mod20">0</td>
+                <td class="timeClock" id="mod30">0</td>
+                -->
+                <td class="timeClock" id="mod60">0</td>
+            </tr>
+            <tr>
+                <!--
+                <td class="timeLabel">2</td>
+                <td class="timeLabel">3</td>
+                <td class="timeLabel">4</td>
+                <td class="timeLabel">5</td>
+                <td class="timeLabel">6</td>
+                <td class="timeLabel">12</td>
+                <td class="timeLabel">15</td>
+                <td class="timeLabel">20</td>
+                <td class="timeLabel">30</td>
+                -->
+                <td class="timeLabel">60</td>
+            </tr>
+        </table>
+        <div class="largeText">AUTOMATION</div>
+        <table id="automata">
+            <tr>
+                <th>Rune number</th>
+                <th>Time to active</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td><input type="number" id="runeType"  min="1" max="25"></td>
+                <td><input type="number" id="activeTime"  min="0" max="60"></td>
+                <td><select id="autoAction">
+                    <option value="toggle">TOGGLE</option>
+                    <option value="off">OFF</option>
+                    <option value="on">ON</option>
+                </select></td>
+                <td><button onclick="setAuto()">Set</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script src="js/runeData.js"></script>
+<script src="js/main.js"></script>
+<script src="js/automata.js"></script>
+<script src="js/constructor.js"></script>
+
+</html>
